@@ -4,13 +4,9 @@ namespace HomeEnergyApi.Models
     {
         public List<Home> HomesList;
 
-        public HomeRepository(HomeRepository repository)
-        {
-            HomesList = new List<Home>();
-        }
-
         public HomeRepository()
         {
+            HomesList = new List<Home>();
         }
 
         public Home Save(Home home)
