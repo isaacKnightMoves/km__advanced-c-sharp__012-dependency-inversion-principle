@@ -1,12 +1,16 @@
 namespace HomeEnergyApi.Models
 {
-    public class HomeRepository
+    public class HomeRepository : IRepository<int, Home>
     {
         public List<Home> HomesList;
 
-        public HomeRepository()
+        public HomeRepository(HomeRepository repository)
         {
             HomesList = new List<Home>();
+        }
+
+        public HomeRepository()
+        {
         }
 
         public Home Save(Home home)

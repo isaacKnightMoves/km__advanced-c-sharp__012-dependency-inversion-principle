@@ -5,6 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddSingleton<IControllerFactory, ApplicationFactory>();
+
 var app = builder.Build();
 
 app.MapControllers();
